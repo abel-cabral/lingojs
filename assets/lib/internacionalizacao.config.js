@@ -32,3 +32,4 @@ function atualizarTraducao() {
 // Atribuindo as funções diretamente ao objeto window
 window.i = i;
 window.initInternacionalizacao = initInternacionalizacao;
+window.atualizarTraducao = atualizarTraducao;
