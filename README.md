@@ -4,9 +4,11 @@ Abel Languages
 - [@abel-cabral](https://www.github.com/abel-cabral)
 
 
-## Documentation
+## Documentation and Download
 
 [Documentation](https://linktodocumentation)
+
+[Download](https://github.com/abel-cabral/Internacionalizacao/releases)
 
 
 ## Instalação
