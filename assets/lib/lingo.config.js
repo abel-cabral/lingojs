@@ -11,7 +11,8 @@ var idiomas = [
       comida3: "feijão",
       pedido: "pedido",
       credito: "Crédito",
-      debito: "Débito"
+      debito: "Débito",
+      cifra: "R$ 23,78"
     },
   },
   {
@@ -26,7 +27,8 @@ var idiomas = [
       comida3: "beans",
       pedido: "order",
       credito: "Credit",
-      debito: "Debit"
+      debito: "Debit",
+      cifra: "USD $ 7.22"
     },
   },
   {
@@ -41,7 +43,8 @@ var idiomas = [
       comida3: "frijoles",
       pedido: "pedido",
       credito: "Tarjeta crédito",
-      debito: "Tarjeta débito"
+      debito: "Tarjeta débito",
+      cifra: "MXN $ 21.90"
     },
   },
 ];
