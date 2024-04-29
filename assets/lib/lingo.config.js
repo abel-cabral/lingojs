@@ -40,8 +40,8 @@ var idiomas = [
       comida2: "arroz",
       comida3: "frijoles",
       pedido: "pedido",
-      credito: "Tarjeta de crédito",
-      debito: "Tarjeta de débito"
+      credito: "Tarjeta crédito",
+      debito: "Tarjeta débito"
     },
   },
 ];
