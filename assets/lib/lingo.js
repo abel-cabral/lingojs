@@ -1,8 +1,8 @@
 var dicionario;
 
 function i(chave) {
-  if (dicionario[chave]) return dicionario[chave];
-  return dicionario;
+    if (dicionario[chave]) return dicionario[chave];
+    return dicionario;
 }
 
 function initInternacionalizacao(idioma) {
@@ -19,14 +19,23 @@ function atualizarTraducao() {
         for (let chave in dicionario) {
             // Verifique se a chave é uma propriedade própria do objeto (evita herança indesejada)
             if (dicionario.hasOwnProperty(chave)) {
-                // Atualize o texto do elemento no DOM com o texto traduzido
-                document.getElementById(chave).innerHTML = i(chave);
+
+                const elemento = document.querySelector('#' + chave);
+                if (elemento && elemento.tagName === 'SELECT') {
+                    // Fluxo para select
+                    for (let i = 0; i < elemento.length; i++) {
+                        i(elemento[i].id)
+                    }
+                } else {
+                    // Atualize o texto do elemento no DOM com o texto traduzido
+                    document.getElementById(chave).innerHTML = i(chave);
+                }
             }
         }
     } catch (error) {
         return;
     }
-    
+
 }
 
 // Atribuindo as funções diretamente ao objeto window

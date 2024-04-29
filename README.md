@@ -1,4 +1,5 @@
-Abel's Languages
+LingoJS
+
 ## Authors
 
 - [@abel-cabral](https://www.github.com/abel-cabral)
@@ -7,7 +8,7 @@ Abel's Languages
 
 [Download](https://github.com/abel-cabral/Internacionalizacao/releases)
 
-[Demonstração](https://abel-cabral.github.io/abel-s-languages)
+[Demonstração](https://abel-cabral.github.io/abel-s-lingo.config.jss)
 
 ## Instalação
 
@@ -17,11 +18,11 @@ Esta biblioteca oferece suporte à internacionalização do seu site, permitindo
 
 ## Passo 1: Importar Scripts no HTML
 
-Certifique-se de importar os scripts `language.js` e `internacionalizacao.config.js` no cabeçalho do seu HTML, nessa ordem, para evitar erros de idioma.
+Certifique-se de importar os scripts `lingo.config.js` e `lingo.js` no cabeçalho do seu HTML, nessa ordem, para evitar erros de idioma.
 
 ```html
-<script src="./assets/lib/language.js"></script>
-<script src="./assets/lib/internacionalizacao.config.js"></script>
+<script src="./assets/lib/lingo.config.js"></script>
+<script src="./assets/lib/lingo.js"></script>
 ```
 
 ## Passo 2: Inicializar a Biblioteca
@@ -39,7 +40,7 @@ Chame initInternacionalizacao("PTBR") para definir o idioma padrão (Português 
 
 ## Passo 3: Configurar as Traduções
 
-Acesse o arquivo language.js dentro da pasta da sua biblioteca e relacione chave e valor para cada tradução desejada.
+Acesse o arquivo lingo.config.js dentro da pasta da sua biblioteca e relacione chave e valor para cada tradução desejada.
 
 ```javascript
 var idiomas = [

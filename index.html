@@ -5,13 +5,113 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LingoJS</title>
-    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
-    <link rel="icon" href="./assets/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="./assets/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="./style.css" />
-    <script src="./assets/lib/language.js"></script>
-    <script src="./assets/lib/internacionalizacao.config.js"></script>
+    <script src="./assets/lib/lingo.config.js"></script>
+    <script src="./assets/lib/lingo.js"></script>
 
     <style>
+        h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        /* Estilo para o select */
+        #comidas-brasileiras {
+            width: 220px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            /* Adicionando esta linha */
+        }
+
+        /* Estilo para o triângulo */
+        #comidas-brasileiras::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            margin-top: -3px;
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid black;
+            /* Cor do triângulo */
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .styled-input input[type="radio"],
+        .styled-input input[type="checkbox"] {
+            display: none;
+        }
+
+        .styled-input label {
+            display: inline-block;
+            padding: 8px 16px;
+            margin: 0 8px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .styled-input input[type="radio"]:checked+label,
+        .styled-input input[type="checkbox"]:checked+label {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .styled-switch {
+            display: inline-block;
+            position: relative;
+        }
+
+        .styled-switch input[type="checkbox"] {
+            display: none;
+        }
+
+        .styled-switch label {
+            display: block;
+            width: 60px;
+            height: 30px;
+            background-color: #ccc;
+            border-radius: 15px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .styled-switch label::before {
+            content: "";
+            display: block;
+            width: 24px;
+            height: 24px;
+            background-color: #fff;
+            border-radius: 50%;
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .styled-switch input[type="checkbox"]:checked+label {
+            background-color: #007bff;
+        }
+
+        .styled-switch input[type="checkbox"]:checked+label::before {
+            transform: translateX(30px);
+        }
+
+       
+
         /* Media query for small screens */
         @media (max-width: 600px) {
             .buttons {
@@ -44,6 +144,29 @@
                 <button class="button" onclick="paraEsp()">Español</button>
             </div>
         </section>
+
+        <section>
+            <h2 id="pedido" style="text-transform: capitalize;">!</h2>
+            <div class="center">
+                <select id="comidas-brasileiras" style="text-transform: capitalize;">
+                    <option value="0" id="comida1"></option>
+                    <option value="1" id="comida2"></option>
+                    <option value="2" id="comida3"></option>
+                </select>
+            </div>
+        </section>
+
+        <section class="center">
+            <div class="styled-input">
+                <input type="radio" name="pagamento" id="pagamento1" value="credito">
+                <label for="pagamento1" id="credito">Crédito</label>
+                <input type="radio" name="pagamento" id="pagamento2" value="debito">
+                <label for="pagamento2" id="debito">Débito</label>
+            </div>
+        </section>
+
+        <hr>
+
         <section class="about-section">
             <h2 id="sobre">Sobre</h2>
             <p id="descricao"></p>
@@ -51,9 +174,11 @@
     </main>
 
     <footer>
-        <p><span id="desenvolvedor">Desenvolvido por</span> <a href="https://github.com/abel-cabral">Abel Cabral</a></p>
+        <p>
+            <span id="desenvolvedor">Desenvolvido por</span>
+            <a href="https://github.com/abel-cabral">Abel Cabral</a>
+        </p>
     </footer>
-
 </body>
 <script src="./meu_js.js"></script>
 
