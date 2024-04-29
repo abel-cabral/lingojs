@@ -20,7 +20,7 @@ function atualizarTraducao() {
             // Verifique se a chave é uma propriedade própria do objeto (evita herança indesejada)
             if (dicionario.hasOwnProperty(chave)) {
                 // Atualize o texto do elemento no DOM com o texto traduzido
-                document.getElementById(chave).textContent = i(chave);
+                document.getElementById(chave).innerHTML = i(chave);
             }
         }
     } catch (error) {
