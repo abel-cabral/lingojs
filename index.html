@@ -17,6 +17,15 @@
             margin-bottom: 10px;
         }
 
+        main {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
         /* Estilo para o select */
         #comidas-brasileiras {
             width: 220px;
@@ -110,8 +119,6 @@
             transform: translateX(30px);
         }
 
-
-
         /* Media query for small screens */
         @media (max-width: 600px) {
             .buttons {
@@ -124,6 +131,10 @@
             .button {
                 margin-bottom: 10px;
                 /* Add slight space between buttons */
+            }
+
+            footer {
+                margin-top: 40px;
             }
         }
     </style>
@@ -146,9 +157,9 @@
         </section>
 
         <section>
-            <h2 id="pedido" style="text-transform: capitalize;">!</h2>
+            <h2 id="pedido" style="text-transform: capitalize">!</h2>
             <div class="center">
-                <select id="comidas-brasileiras" style="text-transform: capitalize;">
+                <select id="comidas-brasileiras" style="text-transform: capitalize">
                     <option value="0" id="comida1"></option>
                     <option value="1" id="comida2"></option>
                     <option value="2" id="comida3"></option>
@@ -158,9 +169,9 @@
 
         <section class="center">
             <div class="styled-input">
-                <input type="radio" name="pagamento" id="pagamento1" value="credito">
+                <input type="radio" name="pagamento" id="pagamento1" value="credito" />
                 <label for="pagamento1" id="credito">Crédito</label>
-                <input type="radio" name="pagamento" id="pagamento2" value="debito">
+                <input type="radio" name="pagamento" id="pagamento2" value="debito" />
                 <label for="pagamento2" id="debito">Débito</label>
             </div>
         </section>
@@ -169,7 +180,7 @@
             <h4 id="cifra"></h4>
         </section>
 
-        <hr>
+        <hr />
 
         <section class="about-section">
             <h2 id="sobre">Sobre</h2>
