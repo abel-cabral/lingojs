@@ -8,7 +8,7 @@ LingoJS
 
 [Download](https://github.com/abel-cabral/Internacionalizacao/releases)
 
-[Demonstração](https://abel-cabral.github.io/abel-s-lingo.config.jss)
+[Demonstração](https://lingojs.abelcode.dev)
 
 ## Instalação
 
