@@ -147,8 +147,8 @@
 
     <main>
         <section class="welcome-section">
-            <h2 id="ola_mundo">!</h2>
-            <p><span id="escolha_idioma"></span>:</p>
+            <h2 data-id="ola_mundo">!</h2>
+            <p><span data-id="escolha_idioma"></span>:</p>
             <div class="buttons">
                 <button class="button" onclick="paraPt()">Português</button>
                 <button class="button" onclick="paraEng()">English</button>
@@ -157,12 +157,12 @@
         </section>
 
         <section>
-            <h2 id="pedido" style="text-transform: capitalize">!</h2>
+            <h2 data-id="pedido" style="text-transform: capitalize">!</h2>
             <div class="center">
                 <select id="comidas-brasileiras" style="text-transform: capitalize">
-                    <option value="0" id="comida1"></option>
-                    <option value="1" id="comida2"></option>
-                    <option value="2" id="comida3"></option>
+                    <option value="0" data-id="comida1"></option>
+                    <option value="1" data-id="comida2"></option>
+                    <option value="2" data-id="comida3"></option>
                 </select>
             </div>
         </section>
@@ -170,9 +170,9 @@
         <section class="center">
             <div class="styled-input">
                 <input type="radio" name="pagamento" id="pagamento1" value="credito" />
-                <label for="pagamento1" id="credito">Crédito</label>
-                <input type="radio" name="pagamento" id="pagamento2" value="debito" />
-                <label for="pagamento2" id="debito">Débito</label>
+                <label for="pagamento1" id="credito" data-id="credito">Crédito</label>
+                <input type="radio" name="pagamento" id="pagamento2" data-id="pagamento2" value="debito" />
+                <label for="pagamento2" id="debito" data-id="debito">Débito</label>
             </div>
         </section>
 
@@ -183,14 +183,14 @@
         <hr />
 
         <section class="about-section">
-            <h2 id="sobre">Sobre</h2>
-            <p id="descricao"></p>
+            <h2 id="sobre" data-id="sobre">Sobre</h2>
+            <p id="descricao" data-id="descricao"></p>
         </section>
     </main>
 
     <footer>
         <p>
-            <span id="desenvolvedor">Desenvolvido por</span>
+            <span data-id="desenvolvedor">Desenvolvido por</span>
             <a href="https://github.com/abel-cabral">Abel Cabral</a>
         </p>
     </footer>

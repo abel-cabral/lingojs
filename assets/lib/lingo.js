@@ -15,27 +15,20 @@ function initInternacionalizacao(idioma) {
 }
 
 function atualizarTraducao() {
+    console.log(1234)
     try {
         for (let chave in dicionario) {
-            // Verifique se a chave é uma propriedade própria do objeto (evita herança indesejada)
             if (dicionario.hasOwnProperty(chave)) {
+                const elementos = document.querySelectorAll(`[data-id="${chave}"]`);
 
-                const elemento = document.querySelector('#' + chave);
-                if (elemento && elemento.tagName === 'SELECT') {
-                    // Fluxo para select
-                    for (let i = 0; i < elemento.length; i++) {
-                        i(elemento[i].id)
-                    }
-                } else {
-                    // Atualize o texto do elemento no DOM com o texto traduzido
-                    document.getElementById(chave).innerHTML = i(chave);
-                }
+                elementos.forEach(item => {
+                    item.innerHTML = i(chave);
+                });
             }
         }
     } catch (error) {
-        return;
+        console.error(error); // Melhora a visibilidade do erro
     }
-
 }
 
 // Atribuindo as funções diretamente ao objeto window

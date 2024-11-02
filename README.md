@@ -1,4 +1,4 @@
-LingoJS
+LingoJS v1.5.0
 
 ## Authors
 
@@ -69,11 +69,11 @@ Cada objeto dentro do array idiomas representa um idioma com suas respectivas tr
 
 ## Passo 4: Usar as Traduções no HTML
 
-Adicione IDs correspondentes às chaves de tradução nos elementos HTML.
+Adicione data-id correspondentes às chaves de tradução nos elementos HTML.
 
 ```javascript
-    <h2 id="ola_mundo">Bem-Vindo!</h2>
-    <p id="desenvolvedor"></p>
+    <h2 data-id="ola_mundo">Bem-Vindo!</h2>
+    <p data-id="desenvolvedor"></p>
 ```
 
 O texto entre as tags não é necessário, pois será substituído pelo texto da tradução.
@@ -83,7 +83,7 @@ O texto entre as tags não é necessário, pois será substituído pelo texto da
 Você pode criar funções para alterar o idioma a qualquer momento.
 
 ```javascript
-function paraEng() {
+function lingoIt() {
   initInternacionalizacao("ENG");
   atualizarTraducao();
 }
