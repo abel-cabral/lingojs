@@ -1,4 +1,4 @@
-LingoJS v1.5.0
+LingoJS v1.1.0
 
 ## Authors
 
